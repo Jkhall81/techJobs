@@ -26,4 +26,6 @@ export function toSlug(str: string) {
     .replace(/[^\w-]+/g, "");
 }
 
-export function isAdmin(user: UserResource | User) {}
+export function isAdmin(user: UserResource | User) {
+  return user.publicMetadata?.role === "admin";
+}
